@@ -1,5 +1,8 @@
 package org.pbuczek
 
-fun main(args: Array<String>) {
-    
+import FileService
+
+fun main() {
+    val fileService = FileService()
+    println(fileService.downloadPostsToJsonFiles())
 }
