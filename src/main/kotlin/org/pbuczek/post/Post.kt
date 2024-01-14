@@ -1,10 +1,10 @@
 package org.pbuczek.post
 
 class Post {
-    private var userId = 0
+    var userId = 0
     var id = 0
-    private var title: String? = null
-    private var body: String? = null
+    var title: String? = null
+    var body: String? = null
 
     constructor()
     constructor(userId: Int, id: Int, title: String?, body: String?) {
