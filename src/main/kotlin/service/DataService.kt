@@ -1,11 +1,11 @@
-package org.pbuczek.service
+package service
 
 
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.apache.commons.io.IOUtils
-import org.pbuczek.exception.DuplicateIdException
-import org.pbuczek.post.Post
+import exception.DuplicateIdException
+import post.Post
 import java.io.IOException
 import java.net.URL
 import java.nio.charset.StandardCharsets

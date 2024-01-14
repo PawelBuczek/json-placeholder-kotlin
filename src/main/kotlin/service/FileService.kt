@@ -1,6 +1,6 @@
 import com.fasterxml.jackson.databind.ObjectMapper
-import org.pbuczek.exception.DuplicateIdException
-import org.pbuczek.service.DataService
+import exception.DuplicateIdException
+import service.DataService
 import java.io.IOException
 import java.nio.file.Files
 import java.nio.file.Paths

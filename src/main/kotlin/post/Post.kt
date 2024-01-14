@@ -1,4 +1,4 @@
-package org.pbuczek.post
+package post
 
 class Post {
     var userId = 0

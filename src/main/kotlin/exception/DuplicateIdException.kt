@@ -1,3 +1,3 @@
-package org.pbuczek.exception
+package exception
 
 class DuplicateIdException(errorMessage: String?) : Exception(errorMessage)
