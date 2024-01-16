@@ -138,7 +138,7 @@ internal class FileServiceTest {
     @SneakyThrows
     private fun mockGetJsonFromUrlAddressMethod(fileService: FileService, mockedJsonResponse: String?) {
         val dataService = Mockito.spy(DataService(ObjectMapper()))
-        Mockito.`when`(dataService.getJsonFromUrlAddress("https://jsonplaceholder.typicode.com/posts"))
+        Mockito.`when`(dataService.getJsonFromUrlAddress(FileService.JSON_PLACEHOLDER_POSTS_URL_ADDRESS))
             .thenReturn(mockedJsonResponse)
         fileService.setDataService(dataService)
     }
