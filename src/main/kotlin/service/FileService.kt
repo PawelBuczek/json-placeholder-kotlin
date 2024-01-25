@@ -31,7 +31,7 @@ class FileService {
             val jsonPosts = dataService.getJsonFromUrlAddress(JSON_PLACEHOLDER_POSTS_URL_ADDRESS)
             val posts = dataService.mapJsonToPosts(jsonPosts)
             val formatter = DateTimeFormatter.ofPattern("yyyy_MM(MMM)_dd_HH_mm_ss")
-            folderPath = "results/posts_" + formatter.format(LocalDateTime.now())
+            folderPath = "results/posts_${formatter.format(LocalDateTime.now())}"
             createDirectory(folderPath)
             dataService.savePostsToFiles(posts, folderPath)
         } catch (e: DuplicateIdException) {
