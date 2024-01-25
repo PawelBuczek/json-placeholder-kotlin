@@ -1,7 +1,6 @@
 package service
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import lombok.SneakyThrows
 import org.apache.commons.io.FileUtils
 import org.junit.jupiter.api.*
 import org.mockito.Mockito
@@ -12,7 +11,6 @@ import java.io.PrintStream
 
 internal class FileServiceTest {
     @AfterEach
-    @SneakyThrows
     fun tearDown() {
         FileUtils.deleteDirectory(File(folderPath))
     }
@@ -128,14 +126,12 @@ internal class FileServiceTest {
         )
     }
 
-    @SneakyThrows
     private fun assertPostFileIsCorrect(filePath: String, expectedFileContents: String) {
         val file = File(filePath)
         Assertions.assertTrue(file.exists())
         Assertions.assertEquals(expectedFileContents, FileUtils.readFileToString(file, "utf-8"))
     }
 
-    @SneakyThrows
     private fun mockGetJsonFromUrlAddressMethod(fileService: FileService, mockedJsonResponse: String?) {
         val dataService = Mockito.spy(DataService(ObjectMapper()))
         Mockito.`when`(dataService.getJsonFromUrlAddress(FileService.JSON_PLACEHOLDER_POSTS_URL_ADDRESS))
